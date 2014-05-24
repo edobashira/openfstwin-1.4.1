@@ -316,8 +316,8 @@ typedef MatcherFst<ConstFst<LogArc>,
 
 
 // Label look-ahead matchers
-extern const char ilabel_lookahead_fst_type[];
-extern const char olabel_lookahead_fst_type[];
+extern OPENFSTDLL const char ilabel_lookahead_fst_type[];
+extern OPENFSTDLL const char olabel_lookahead_fst_type[];
 
 static const uint32 ilabel_lookahead_flags = kInputLookAheadMatcher |
     kLookAheadWeight | kLookAheadPrefix |

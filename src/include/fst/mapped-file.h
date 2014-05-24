@@ -68,15 +68,15 @@ class MappedFile {
   // Creates a MappedFile object with a new[]'ed block of memory of size.
   // Align can be used to specify a desired block alignment.
   // RECOMMENDED FOR INTERNAL USE ONLY, may change in future releases.
-  static MappedFile* Allocate(size_t size, int align = kArchAlignment);
+  static OPENFSTDLL MappedFile* Allocate(size_t size, int align = kArchAlignment);
 
   // Creates a MappedFile object pointing to a borrowed reference to data.
   // This block of memory is not owned by the MappedFile object and will not
   // be freed.
   // RECOMMENDED FOR INTERNAL USE ONLY, may change in future releases.
   static MappedFile* Borrow(void *data);
-
-  static const int kArchAlignment;
+  
+  static OPENFSTDLL const int kArchAlignment;
 
  private:
   explicit MappedFile(const MemoryRegion &region);

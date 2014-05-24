@@ -1,0 +1,4 @@
+In the powershell as Administrator type the below to allow
+execution of the scripts
+
+Set-ExecutionPolicy unrestricted

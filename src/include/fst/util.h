@@ -404,8 +404,8 @@ void OPENFSTDLL ConvertToLegalCSymbol(string *s);
 // UTILITIES FOR STREAM I/O
 //
 
-bool AlignInput(istream &strm);
-bool AlignOutput(ostream &strm);
+bool OPENFSTDLL AlignInput(istream &strm);
+bool OPENFSTDLL AlignOutput(ostream &strm);
 
 //
 // UTILITIES FOR PROTOCOL BUFFER I/O

@@ -1122,8 +1122,8 @@ class ReplaceFstImpl : public CacheBaseImpl<typename C::State, C> {
 //
 // This class attaches interface to implementation and handles
 // reference counting, delegating most methods to ImplToFst.
-template <class A, class T = DefaultReplaceStateTable<A>,
-          class C = DefaultCacheStore<A> >
+template <class A, class T,
+          class C>
 class ReplaceFst : public ImplToFst< ReplaceFstImpl<A, T, C> > {
  public:
   friend class ArcIterator< ReplaceFst<A, T, C> >;

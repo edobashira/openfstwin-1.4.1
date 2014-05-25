@@ -61,9 +61,8 @@ struct SymbolTableReadOptions {
   string source;
 };
 
-struct OPENFSTDLL SymbolTableTextOptions {
-  SymbolTableTextOptions();
-
+struct SymbolTableTextOptions {
+  OPENFSTDLL SymbolTableTextOptions();
   bool allow_negative;
   string fst_field_separator;
 };

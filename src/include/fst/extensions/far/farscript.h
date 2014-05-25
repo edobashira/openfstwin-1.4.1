@@ -42,7 +42,7 @@ namespace script {
 // this struct is only used to pass them deeper in the call graph.
 // Be sure you understand why this is so before using this struct
 // for anything else!
-OPENFSTDLL struct FarCompileStringsArgs {
+struct FarCompileStringsArgs {
   const vector<string> &in_fnames;
   const string &out_fname;
   const string &fst_type;

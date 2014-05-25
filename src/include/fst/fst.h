@@ -53,7 +53,7 @@ template <class A> class StateIteratorData;
 template <class A> class ArcIteratorData;
 template <class A> class MatcherBase;
 
-struct OPENFSTDLL FstReadOptions {
+struct  FstReadOptions {
   // FileReadMode(s) are advisory, there are many conditions than prevent a
   // file from being mapped, READ mode will be selected in these cases with
   // a warning indicating why it was chosen.
@@ -70,7 +70,7 @@ struct OPENFSTDLL FstReadOptions {
   bool read_isymbols;           // Read isymbols, if any, default true
   bool read_osymbols;           // Read osymbols, if any, default true
 
-  explicit FstReadOptions(const string& src = "<unspecified>",
+  explicit OPENFSTDLL FstReadOptions(const string& src = "<unspecified>",
                           const FstHeader *hdr = 0,
                           const SymbolTable* isym = 0,
                           const SymbolTable* osym = 0);
@@ -83,7 +83,7 @@ struct OPENFSTDLL FstReadOptions {
   static FileReadMode ReadMode(const string &mode);
 };
 
-struct OPENFSTDLL FstWriteOptions {
+struct  FstWriteOptions {
   string source;                 // Where you're writing to
   bool write_header;             // Write the header?
   bool write_isymbols;           // Write input symbols?
@@ -91,7 +91,7 @@ struct OPENFSTDLL FstWriteOptions {
   bool align;                    // Write data aligned where appropriate;
                                  // this may fail on pipes
 
-  explicit FstWriteOptions(const string& src = "<unspecifed>",
+  explicit OPENFSTDLL FstWriteOptions(const string& src = "<unspecifed>",
                            bool hdr = true, bool isym = true,
                            bool osym = true, bool alig = FLAGS_fst_align)
       : source(src), write_header(hdr),

@@ -322,11 +322,11 @@ const uint64 kFstProperties = kBinaryProperties | kTrinaryProperties;
 // mutating fst operations.
 OPENFSTDLL inline uint64 SetStartProperties(uint64 inprops);
 template <typename Weight>
-OPENFSTDLL uint64 SetFinalProperties(uint64 inprops, Weight old_weight,
+uint64 SetFinalProperties(uint64 inprops, Weight old_weight,
                           Weight new_weight);
 OPENFSTDLL inline uint64 AddStateProperties(uint64 inprops);
 template <typename A>
-OPENFSTDLL uint64 AddArcProperties(uint64 inprops, typename A::StateId s, const A &arc,
+uint64 AddArcProperties(uint64 inprops, typename A::StateId s, const A &arc,
                            const A *prev_arc);
 OPENFSTDLL inline uint64 DeleteStatesProperties(uint64 inprops);
 OPENFSTDLL inline uint64 DeleteAllStatesProperties(uint64 inprops, uint64 staticProps);

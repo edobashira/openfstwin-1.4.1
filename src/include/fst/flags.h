@@ -188,11 +188,12 @@ class FlagRegister {
     return strm.str();
   }
 
-  static fst::FstOnceType register_init_;   // ensures only called once
-  static fst::Mutex* register_lock_;        // multithreading lock
-  static FlagRegister<T> *register_;
+  OPENFSTDLL static fst::FstOnceType register_init_;   // ensures only called once
+  OPENFSTDLL static fst::Mutex* register_lock_;        // multithreading lock
+  OPENFSTDLL static FlagRegister<T> *register_;
 };
 
+#ifdef OPENFSTEXPORT
 template <class T>
 fst::FstOnceType FlagRegister<T>::register_init_ = fst::FST_ONCE_INIT;
 
@@ -201,7 +202,7 @@ fst::Mutex *FlagRegister<T>::register_lock_ = 0;
 
 template <class T>
 FlagRegister<T> *FlagRegister<T>::register_ = 0;
-
+#endif
 
 template <typename T>
 class FlagRegisterer {

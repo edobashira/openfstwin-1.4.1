@@ -76,7 +76,7 @@ class GenericRegister {
   virtual EntryType LoadEntryFromSharedObject(const KeyType &key) const {
 #ifdef FST_NO_DYNAMIC_LINKING
     return EntryType();
-#elif //Added PD
+#else //Added PD
     string so_filename = ConvertKeyToSoFilename(key);
     void *handle = dlopen(so_filename.c_str(), RTLD_LAZY);
     if (handle == 0) {
